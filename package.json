@@ -1,0 +1,28 @@
+{
+  "name": "avr-stt-gemini",
+  "version": "1.0.0",
+  "author": "Agent Voice Response <info@agentvoiceresponse.com>",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "start:dev": "nodemon --inspect ./index.js",
+    "dc:build": "docker build --platform=linux/amd64 -t agentvoiceresponse/avr-stt-gemini:latest -t agentvoiceresponse/avr-stt-gemini:${npm_package_version} .",
+    "dc:push": "docker push agentvoiceresponse/avr-stt-gemini:latest && docker push agentvoiceresponse/avr-stt-gemini:${npm_package_version}"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "contributors": [{
+    "name": "Giuseppe Careri",
+    "email": "info@gcareri.com",
+    "url": "https://github.com/gcareri"
+  }, {
+    "name": "seif walid mamdouh",
+    "url": "https://github.com/seifwalid"
+  }]
+}
