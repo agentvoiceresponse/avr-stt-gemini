@@ -2,7 +2,7 @@
   "name": "avr-stt-gemini",
   "version": "1.0.0",
   "author": "Agent Voice Response <info@agentvoiceresponse.com>",
-  "description": "",
+  "description": "This repository provides a speech-to-text transcription service using Google's Gemini API integrated with the Agent Voice Response system. ",
   "main": "index.js",
   "scripts": {
     "start": "node .",
