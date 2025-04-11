@@ -7,8 +7,8 @@ This repository provides a speech-to-text transcription service using **Google's
 Before setting up the project, ensure you have the following:
 
 1. **Node.js** and **npm** installed.
-2. A **Google Cloud account** with the **Gemini API** enabled.
-3. A **Google Cloud API Key** with the necessary permissions to access the Gemini API.
+2. A **Google Cloud account** with the **Vertex AI API** enabled (which includes Gemini models). You can enable it in the [Google Cloud Console](https://console.cloud.google.com/apis/library/vertexai.googleapis.com).
+3. A **Google Cloud API Key** with the necessary permissions to access the Vertex AI API. You can create an API key by following the instructions in the [Google Cloud documentation](https://cloud.google.com/docs/authentication/api-keys#creating_an_api_key). Ensure the key is restricted appropriately for security. Alternatively, you can obtain an API key directly from [Google AI Studio](https://aistudio.google.com/app/apikey).
 
 ## Setup
 
@@ -27,13 +27,13 @@ npm install
 
 ### 3. Set Up Google Cloud Credentials
 
-Set the environment variable to use your Google Cloud API key in your Node.js application:
+Create a `.env` file in the root directory of the project by copying the `.env.example` file:
 
 ```bash
-
+cp .env.example .env
 ```
 
-Alternatively, you can set this variable in your `.env` file (you can use the `dotenv` package for loading environment variables).
+Then, edit the `.env` file and replace `xxxx` with your actual Google Cloud API Key obtained in the prerequisites step.
 
 ### 4. Configuration
 
@@ -41,7 +41,7 @@ Ensure that you have the following environment variables set in your `.env` file
 
 ```
 PORT=6021
-GOOGLE_API_KEY=your_google_api_key
+GEMINI_API_KEY=your_google_api_key_here # Replace with your actual API key
 
 ```
 
